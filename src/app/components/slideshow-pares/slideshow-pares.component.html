@@ -1,0 +1,26 @@
+<ion-slides [options]="slideOpts">
+  <ion-slide *ngFor="let pares of seriesPopulares | pares">
+    <ion-row>
+      <ion-col size="12" *ngFor="let serie of pares">
+        <ion-card (click)="verDetalle( serie.id )">
+          <img class ="poster" 
+               [src]="serie.poster_path | imagenpares">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-slide>
+
+  <ion-slide class="slide-mas">
+    
+   
+  
+    <ion-button expand="full"
+                class="btn-mas"
+                size="large"
+                (click)="onClick()">
+      <ion-icon name="add"
+                slot="icon-only"></ion-icon>
+    </ion-button>
+
+  </ion-slide>
+</ion-slides>

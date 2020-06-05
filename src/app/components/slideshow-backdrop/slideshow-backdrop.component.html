@@ -1,0 +1,7 @@
+<ion-slides pager="true" [options]="slideOptsEmision">
+  <ion-slide *ngFor="let serie of seriesEnEmision">
+    <ion-card (click)="verDetalle( serie.id )">
+      <img [src]="serie.backdrop_path | imagen ">
+    </ion-card>
+  </ion-slide>
+</ion-slides>

@@ -1,5 +1,7 @@
 {
   "name": "infoSeries",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

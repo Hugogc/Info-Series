@@ -1,0 +1,24 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ImagenPipe } from './imagen.pipe';
+import { ParesPipe } from './pares.pipe';
+import { ImagenparesPipe } from './imagenpares.pipe';
+
+
+
+@NgModule({
+  declarations: [
+    ImagenPipe,
+    ParesPipe,
+    ImagenparesPipe
+  ],
+  imports: [
+    CommonModule
+  ],
+  exports: [
+    ImagenPipe,
+    ParesPipe,
+    ImagenparesPipe
+  ],
+})
+export class PipesModule { }
