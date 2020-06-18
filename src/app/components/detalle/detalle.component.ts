@@ -48,6 +48,7 @@ export class DetalleComponent implements OnInit {
 
   volver() {
     this.modalCtrl.dismiss();
+    this.dataLocal.cargarFavoritos();
   }
 
   favorito() {

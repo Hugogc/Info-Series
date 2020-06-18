@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, Input } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { SerieDetalle } from '../interfaces/interfaces';
 import { DataLocalService } from '../services/data-local.service';
 import { ModalController } from '@ionic/angular';
@@ -115,8 +115,9 @@ export class Tab3Page {
   async cargarDatos() {
     this.series = await this.dataLocal.cargarFavoritos();
   }
-  ionViewWillEnter() {
+   ionViewWillEnter() {
    this.cargarDatos();
+   this.dataLocal.cargarFavoritos();
   }
   constructor( public dataLocal: DataLocalService,
                private modalCtrl: ModalController ) {}
