@@ -1,9 +1,31 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3 class="ion-text-center"><span>Series&nbsp;</span><span>&nbsp;favoritas</span></h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-slides *ngIf="dataLocal.series.length === 0"
+              [options]="slideOpts">
+    <ion-slide>
+      <h1>No hay series favoritas</h1>
+    </ion-slide>
+  </ion-slides>
+
+
+  <ion-grid *ngIf="dataLocal.series.length > 0" fixed>
+    <ion-row>
+      <ion-col size="6" *ngFor="let serie of series">
+        <ion-card (click)="verDetalle( serie.id )">
+          <img [src]="serie.poster_path | imagen"
+               (load)="cargarDatos( $event )">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+
+</ion-content>

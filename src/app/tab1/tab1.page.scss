@@ -1,6 +1,13 @@
 ion-content {
-  --background: rgb(221, 248, 221);
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcfff5+1,dee9d3+9,aec7a5+99 */
+--background: rgb(252,255,245); /* Old browsers */
+--background: -moz-linear-gradient(top,  rgba(252,255,245,1) 1%, rgba(222,233,211,1) 9%, rgba(174,199,165,1) 99%); /* FF3.6-15 */
+--background: -webkit-linear-gradient(top,  rgba(252,255,245,1) 1%,rgba(222,233,211,1) 9%,rgba(174,199,165,1) 99%); /* Chrome10-25,Safari5.1-6 */
+--background: linear-gradient(to bottom,  rgba(252,255,245,1) 1%,rgba(222,233,211,1) 9%,rgba(174,199,165,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff5', endColorstr='#aec7a5',GradientType=0 ); /* IE6-9 */
+
 }
+
 @import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
 
 

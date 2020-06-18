@@ -21,6 +21,7 @@ export class SlideshowParesComponent implements OnInit {
 
 
 
+
   constructor( private modalCtrl: ModalController ) { }
 
   ngOnInit() {}

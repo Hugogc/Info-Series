@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { SeriesService } from '../services/series.service';
-import { Serie } from '../interfaces/interfaces';
+import { Serie, RespuestaMDB } from '../interfaces/interfaces';
 import { ModalController } from '@ionic/angular';
 import { DetalleComponent } from '../components/detalle/detalle.component';
+import { DataLocalService } from '../services/data-local.service';
 
 @Component({
   selector: 'app-tab1',
@@ -106,33 +107,41 @@ export class Tab1Page implements OnInit {
   };
 
   constructor( private seriesService: SeriesService,
-               private modalCtrl: ModalController ) {}
+               private modalCtrl: ModalController,
+               private dataLocal: DataLocalService ) {}
 
 
 
-  ngOnInit() {
+    ngOnInit() {
+      this.getEnEmision();
+      this.getPopulares();
+      this.getUltimas();
+    }
+    ionViewWillEnter() {
+      this.dataLocal.cargarFavoritos();
+    }
+
+
+
+    async verDetalle( id: string ) {
+      const modal = await this.modalCtrl.create({
+        component: DetalleComponent,
+        componentProps: {
+          id
+        }
+      });
+      modal.present();
+    }
+
+  cargarMasPopulares() {
+    this.getPopulares();
+  }
+
+  getEnEmision() {
     this.seriesService.getEnEmision()
       .subscribe( resp => {
         this.seriesEnEmision = resp.results;
       });
-    this.getPopulares();
-    this.getUltimas();
-
-
-  }
-
-  async verDetalle( id: string ) {
-    const modal = await this.modalCtrl.create({
-       component: DetalleComponent,
-       componentProps: {
-         id
-       }
-     });
-    modal.present();
-   }
-
-  cargarMasPopulares() {
-    this.getPopulares();
   }
   getPopulares() {
     this.seriesService.getPopulares()
