@@ -116,10 +116,11 @@ export class Tab1Page implements OnInit {
       this.getEnEmision();
       this.getPopulares();
       this.getUltimas();
-    }
-    ionViewWillEnter() {
       this.dataLocal.cargarFavoritos();
     }
+    // ionViewWillEnter() {
+    //   this.dataLocal.cargarFavoritos();
+    // }
 
 
 

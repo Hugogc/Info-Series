@@ -21,7 +21,7 @@
       <ion-col size="6" *ngFor="let serie of series">
         <ion-card (click)="verDetalle( serie.id )">
           <img [src]="serie.poster_path | imagen"
-               (load)="cargarDatos( $event )">
+               >
         </ion-card>
       </ion-col>
     </ion-row>

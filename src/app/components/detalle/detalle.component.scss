@@ -28,7 +28,12 @@
 }
 
 .card-actor {
-    height: 320px;
+    height: 100%;
+    border: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-style: none !important;
+
 }
 
 .actor-name {
