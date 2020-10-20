@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.hugogalan.infoseries" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.hugogalan.infoseries" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Info Series</name>
     <description>Aplicacion para estar al dia de tus series favoritas</description>
     <author email="infoseries@hugogalan.com" href="infoseries.hugogalan.com">Hugo Galan</author>
