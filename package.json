@@ -28,7 +28,7 @@
     "cordova-sqlite-storage": "^5.0.0",
     "core-js": "^2.5.4",
     "dot-prop": "^5.2.0",
-    "elliptic": "^6.5.3",
+    "elliptic": "^6.5.4",
     "node-forge": "^0.10.0",
     "rxjs": "~6.5.1",
     "serialize-javascript": "^4.0.0",
