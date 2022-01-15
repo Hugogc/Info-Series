@@ -29,7 +29,7 @@
     "core-js": "^2.5.4",
     "dot-prop": "^5.2.0",
     "elliptic": "^6.5.3",
-    "node-forge": "^0.10.0",
+    "node-forge": "^1.0.0",
     "rxjs": "~6.5.1",
     "serialize-javascript": "^4.0.0",
     "tree-kill": "^1.2.2",
